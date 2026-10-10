@@ -1,0 +1,32 @@
+{
+  "name": "nightcap",
+  "version": "0.1.0",
+  "description": "A hard stop for unattended agents: dollar caps, pinned models and a crash-safe action ledger for MCP tools and Claude Code, plus a morning report.",
+  "type": "module",
+  "bin": {
+    "nightcap": "bin/nightcap.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "examples"
+  ],
+  "scripts": {
+    "test": "node --test test/engine.test.js test/integration.test.js",
+    "demo": "node demo/overnight.js && node bin/nightcap.js report --policy demo/policy.json --ledger demo/.out/ledger.jsonl"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "claude-code",
+    "ai-agents",
+    "budget",
+    "guardrails",
+    "idempotency",
+    "llm-cost",
+    "hooks"
+  ],
+  "license": "MIT"
+}

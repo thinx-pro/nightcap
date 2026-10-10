@@ -1,0 +1,18 @@
+{
+  "_comment": "Demo policy for the fake server. Prices mirror demo/fake-paid-server.js, not any real provider.",
+  "budget": { "usd": 5, "per": "24h" },
+  "rules": [
+    {
+      "tool": "*generate_video",
+      "pin": { "model": ["video-draft-480p"] },
+      "max": { "duration_s": 10 },
+      "price": {
+        "by": "model",
+        "table": { "video-draft-480p": 0.02, "video-std-720p": 0.08, "video-pro-1080p": 0.5 },
+        "per": "duration_s",
+        "perDefault": 5
+      }
+    },
+    { "tool": "*send_email", "sideEffect": true, "maxCalls": 10 }
+  ]
+}
