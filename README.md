@@ -2,6 +2,9 @@
 
 **A hard stop for agents you leave running.** nightcap sits between your agent and its tools. It puts a dollar cap on paid tool calls, pins models and tiers so the agent can't drift to the expensive default, and refuses to repeat an email, form or payment whose outcome it doesn't know. In the morning you get a one-page report.
 
+<!-- agent-preflight -->
+> **Also a Claude Code skill.** `nightcap` is part of [agent-preflight](https://github.com/thinx-pro/agent-preflight), 16 offline checks for coding agents: `/plugin marketplace add thinx-pro/agent-preflight` then `/plugin install nightcap@agent-preflight`, and ask Claude in plain words.
+
 ![node >=18](https://img.shields.io/badge/node-%3E%3D18-3c873a) ![zero dependencies](https://img.shields.io/badge/dependencies-0-blue) ![MCP stdio proxy](https://img.shields.io/badge/MCP-stdio%20proxy-7c3aed) ![Claude Code hook](https://img.shields.io/badge/Claude%20Code-hook-d97757) ![license MIT](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ![nightcap demo: the same bad night with and without nightcap, then the morning report](assets/demo.png)
