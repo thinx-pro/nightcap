@@ -136,9 +136,3 @@ npm run demo    # the screenshot above
 MIT
 
 If nightcap saved you a bad morning, a ⭐ helps other people find it.
-
----
-
-### 中文说明
-
-**nightcap**：给无人值守的 Agent 装一个「硬刹车」。模型的额度只管模型调用，管不到 Agent 调用的付费工具（视频、图像、搜索）和有副作用的动作（发邮件、提交表单、付款）。nightcap 夹在 Agent 和工具之间：按你写的价目表给每次工具调用估价，超过美元上限就硬性拒绝；把模型和档位钉死，Agent 没指定时自动填入便宜档；对有副作用的动作先写日志再执行，进程崩溃后再重试时，会拒绝「结果未知」的那一次，等人确认后用 `nightcap resolve` 放行；早上用 `nightcap report` 看一页报告。支持两种接入方式：任何 MCP 客户端都可以用 stdio 代理（`nightcap run -- <原服务器命令>`），Claude Code 也可以用 Hook（同时覆盖 Bash）。零依赖，数据只写本地。价格需要你自己填写，示例里的数字都是占位。
